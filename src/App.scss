@@ -1,0 +1,31 @@
+$body-background: #3742751f;
+$body-gradient: linear-gradient(to right, rgb(234, 241, 255), rgb(97, 97, 112)) repeat scroll 0% 0%;
+
+//#3742751f
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*html,*/
+body {	
+  color: #404040;
+  /*background: rgba(48, 112, 44, 0.4);*/
+  // background-color: $body-background;
+  background: $body-gradient;
+  font-size: 1rem;
+	margin: 0; height: 100%; overflow: hidden;} /*disable main scroll */
+
+.container {
+  display: flex;
+  justify-content: left;
+  /*flex-wrap: wrap;*/
+ /* max-width: 1200px;*/
+
+  /*padding: 0 1rem;
+  margin-left: auto;*/
+
+  /*margin-right: auto;*/
+  margin-top: 2em;
+}

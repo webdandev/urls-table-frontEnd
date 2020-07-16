@@ -1,0 +1,81 @@
+// $box-shadow:
+$main-container-color: #fafeff; //eff8f9;
+$links-2n-font-color: black;
+$links-2n1-font-color: black;
+$li-2n-background: #CCCC99; //#c8a7a740;
+// $main-container-border-c: ;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.outerdiv {
+  width: 80%;
+  /*margin: auto;*/  
+}
+
+.headline {
+  width: 80%;
+  margin: auto;
+  font-size: 2em;
+  text-align: center;
+  box-shadow: 4px 4px 5px #444444;
+  color: #663366;
+  background-color: #306d8052;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.headline:hover{ /*because of inheritance from <p> in Navigation */
+  cursor: context-menu;  
+}
+
+.main-container {
+  // background-color: $main-container-color;
+  overflow-y: scroll;
+  height: 400px;
+	margin-top: 35px;
+  margin: 0px 30px; /*both left and right so when center children they will indeed be in the center */
+/*  overflow: scroll;*/
+  /*display: flex;
+  align-items: flex-start;*/
+  // border-radius: 8px;
+  border: solid 1px #330099;
+  // border-radius: 10% / 20%;
+  border-radius: 15px 40px 40px 15px;
+}
+
+ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  /*flex-wrap: wrap;*/ 
+}
+
+li:nth-child(2n) {
+  background: $li-2n-background;
+  padding-left: 20px; //to keep the background color
+}
+// li:nth-child(2n+1) {
+//   background: #dddddd47;
+// }
+li:nth-child(2n) a {
+  color: $links-2n-font-color;
+}
+li:nth-child(2n+1) a {
+  color: $links-2n1-font-color;
+  padding-left: 15px; //different alignment than nth-child(2n)
+}
+
+.greet {
+	margin: 10px 20px;
+	color: black;
+	font-size: 1.3em;
+}
+
+footer {
+  display: block;
+  margin-left: 45%;
+  margin-top: 3em;
+}

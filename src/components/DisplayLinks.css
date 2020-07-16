@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('Fonts/Roboto-Light-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+/*@font-face {
+  font-family: 'Roboto';
+  src: url('Fonts/RobotoCondensed-Light-webfont.woff') format('woff');
+  font-style: condensed;
+  font-weight: 300;
+}*/
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('Fonts/Roboto-Bold-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('Fonts/Roboto-Regular-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('Fonts/RobotoCondensed-LightItalic-webfont.woff') format('woff');
+  font-style: italic;
+  font-weight: 300;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.outerdiv {
+  width: 90%;
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-style: condensed;
+
+  /*line-height: 1.8em;*/
+  font-size: 18px;
+  /*color: #5D6063;*/  
+}
+
+.headline {
+  width: 80%;
+  margin: auto;
+  font-size: 2em;
+  text-align: center;
+  box-shadow: 4px 4px 5px #444444;
+  color: #663366;
+  background-color: #306d8052;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.headline:hover {
+  /*because of inheritance from <p> in Navigation */
+  cursor: context-menu;
+}
+
+.main-container {
+  overflow-y: scroll; 
+  height: 400px;
+  margin-top: 35px;
+  margin: 0px 30px; 
+  /*both left and right so when center children they will indeed be in the center */
+  /*  overflow: scroll;*/
+  /*display: flex;
+  align-items: flex-start;*/
+  border: solid 1px #330099;
+  /*border-radius: 15px 40px 40px 15px;*/
+  border-radius: 15px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  /*flex-wrap: wrap;*/
+}
+
+li:nth-child(2n) {
+  background: #CCCC99;
+  padding-left: 20px;
+  /*text-indent: 1.3em; Works as well! from web typography tutorial*/ 
+}
+
+li:nth-child(2n) a {
+  /*at the moment we only have light-italic and regular-normal for Kulim Park*/
+  /*E.G. if we choose italic, we cant choose 400*/
+  font-family: 'Kulim Park' ,sans-serif;  
+  color: black;
+  font-style: italic; 
+  font-size: 1.06em; /*just cause the 2n+1 are bolded*/
+
+}
+
+li:nth-child(2n+1) a {
+  color: black;
+  padding-left: 15px;
+  /*font-style: condensed; didn't work for some reasone - maybe it's not different than normal in this case*/
+  font-weight: 400;
+  /*font-family: sans-serif;  just me playing*/
+}
+
+.greet {
+  margin: 15px 30px;
+  display: inline;
+  line-height: 3.2em;
+  border-bottom: solid 1.5px; /*black;*/
+  font-size: 1.1em;
+  font-weight: 400;
+  /*font-style: italic;*/
+  color: gray; 
+}
+
+footer {
+  display: block;
+  margin-left: 45%;
+  margin-top: 3em;
+}
+
+@media only screen and (min-width: 850px) {
+  .outerdiv {
+    width: 80%;
+    margin: unset;
+    max-width: 1000px;    
+  }
+}
+
+/*# sourceMappingURL=DisplayLinks.css.map */

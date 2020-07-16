@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	/*flex: wrap;*/
+	position: fixed;
+	top: 0; /*otherwise nav will be under margin-bottom of container class*/
+  width: 100%; /*had to use margin-right because of it (for now)*/ 
+}
+a {
+	color: #1bd197; /*#0366EE;*/
+	transition: all 0.7s 0.1s;
+	/*transform-origin: left top;*/
+	/*transform-origin: 50% 50%;*/
+}
+a:hover, a:active, a:focus {
+  color: #0246a2;
+  /*transform: scale(1.5); doesn't work on links - at the moment...*/  
+  display:inline-block;
+  /*-moz-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);*/
+  /*transform: scale(0.9);*/
+  transform: scale(1.04, 1.25);
+  /*transform: rotate(30deg);*/
+  transform: translate(-2px, -1px);
+  /*transform: skew(30deg, 0deg);*/
+
+  /*transform: rotate(3deg) scale(1.08, 1.6) skew(30deg, 0deg);*/
+  transform: skew(15deg) translate(-1px, -1px) scale(0.98, 0.98);
+}
+p {
+	font-weight: bold;
+/*	text-decoration: none;*/
+}
+
+p:hover {
+	cursor: pointer;	
+}
+
+nav a {	
+	/*padding: 0px 10px;*/
+	padding: 0px 1em;
+	font-size: 1.2em;
+	/*color: #FFFFFF;*/   /*this one works in:  nav a { */
+	/*text-decoration: none;	*/
+}
+
+.textdec {
+	text-decoration: none;
+}
+
+@media only screen and (min-width: 850px) {
+	nav {
+		display: flex;
+		justify-content: flex-end; /*This is different*/
+		/*flex: wrap;*/
+		position: fixed;
+		top: 0; /*otherwise nav will be under margin-bottom of container class*/
+	  width: 100%; /*had to use margin-right because of it (for now)*/ 
+	  max-width: 1000px; /*This is different */
+	}
+}
